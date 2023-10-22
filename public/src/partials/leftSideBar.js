@@ -4,8 +4,6 @@ const leftNavItems = document.querySelectorAll("#left-nav a");
 const alertDanger = flashAlert.error || flashAlert.askQuestionError;
 const alertSuccess = flashAlert.success;
 
-console.log(flashAlert);
-
 if (alertDanger) {
     showAlert(alertDanger[0], "danger");
 } else if (alertSuccess) {

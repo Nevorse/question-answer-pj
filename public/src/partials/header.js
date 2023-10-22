@@ -73,7 +73,7 @@ function showAlert(message, type) {
 }
 function tagsHref() {
     // Extract search from window.location.search
-    let searchArr = window.location.search.split("&")
+    let searchArr = window.location.search.split("&");
     searchArr.forEach(element => {
         if (element.includes("search=")) {            
             const index = searchArr.indexOf(element);
@@ -83,8 +83,8 @@ function tagsHref() {
     const searchString = searchArr.toString().replace(",","&").replace("?","");
     
     // Set href's
-    const url = "http://localhost:5000/api/questions?" + searchString;
-
+    const url = window.location.origin + window.location.pathname + "?" + searchString;
+    
     const tags = document.querySelectorAll(".qtag");
     for (let i = 0; i < tags.length; i++) {
         const tagName = tags[i].textContent;
@@ -102,5 +102,3 @@ function tagsHref() {
         tags[i].setAttribute("href",href);
     }
 }
-
-    
