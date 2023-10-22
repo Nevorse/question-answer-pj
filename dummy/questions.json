@@ -1,0 +1,222 @@
+[
+    {
+        "_id": "624a92bc03bf45a9c81d0615",
+        "title": "How to reverse a string in Python?",
+        "content": "I need to write a Python function that can reverse a given string. Can you provide a sample code?",
+        "user": "61762db11790df42a8b5b540",
+        "tags": ["tag-1"],
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541", "61762db11790df42a8b5b543"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0616",
+        "title": "What are the best practices for version control with Git?",
+        "content": "I want to learn about version control with Git. What are some best practices for using Git effectively?",
+        "user": "61762db11790df42a8b5b541",
+        "tags": ["tag-1","tag-2"],
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b542"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0617",
+        "title": "How to handle exceptions in Java?",
+        "content": "I'm working on a Java project and want to implement exception handling. Can you explain the try-catch block?",
+        "user": "61762db11790df42a8b5b542",
+        "tags": ["tag-1","tag-2","tag-3"],
+        "votes": []
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0618",
+        "title": "What is the difference between JavaScript and TypeScript?",
+        "content": "I'm confused about the differences between JavaScript and TypeScript. Can you clarify their usage and benefits?",
+        "user": "61762db11790df42a8b5b543",
+        "tags": ["tag-1","tag-2","tag-3","tag-4"],
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541", "61762db11790df42a8b5b542"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0619",
+        "title": "How to use loops efficiently in C++?",
+        "content": "I want to optimize my C++ code that involves loops. Any tips for using loops efficiently?",
+        "user": "61762db11790df42a8b5b544",
+        "tags": ["tag-1","tag-2","tag-3","tag-4","tag-5"],
+        "votes": ["61762db11790df42a8b5b541", "61762db11790df42a8b5b542"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d061a",
+        "title": "What are the common data structures in Python?",
+        "content": "I'm new to Python and want to understand the common data structures like lists, dictionaries, and tuples.",
+        "user": "61762db11790df42a8b5b545",
+        "tags": ["tag-1","tag-2","tag-3","tag-4","tag-5"],
+        "votes": ["61762db11790df42a8b5b543"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d061b",
+        "title": "How to implement a binary search in C#?",
+        "content": "I need to implement a binary search algorithm in my C# project. Can you provide a sample code?",
+        "user": "61762db11790df42a8b5b546",
+        "tags": ["tag-1","tag-2","tag-3","tag-4","tag-5"],
+        "votes": []
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d061c",
+        "title": "What are the best resources for learning web development?",
+        "content": "I'm interested in web development and want to find the best online resources for learning HTML, CSS, and JavaScript.",
+        "user": "61762db11790df42a8b5b547",
+        "tags": ["tag-1","tag-2","tag-3","tag-4","tag-5"],
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541", "61762db11790df42a8b5b542", "61762db11790df42a8b5b543", "61762db11790df42a8b5b544"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d061d",
+        "title": "How to optimize database queries in SQL?",
+        "content": "I have a slow-performing SQL query. What are some techniques to optimize database queries?",
+        "user": "61762db11790df42a8b5b548",
+        "tags": ["tag-1","tag-2","tag-3","tag-4","tag-5"],
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b545"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d061e",
+        "title": "What are the advantages of using a framework like React in front-end development?",
+        "content": "I'm considering using React for my front-end development. What advantages does it offer over plain JavaScript?",
+        "user": "61762db11790df42a8b5b549",
+        "tags": ["tag-1","tag-2","tag-3","tag-4","tag-5"],
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b546", "61762db11790df42a8b5b547"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d061f",
+        "title": "How to handle asynchronous tasks in Node.js?",
+        "content": "I'm working on a Node.js project and need to manage asynchronous tasks efficiently. Any tips for that?",
+        "user": "61762db11790df42a8b5b54a",
+        "votes": ["61762db11790df42a8b5b540"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0620",
+        "title": "What are the best practices for secure password storage?",
+        "content": "I want to ensure secure password storage in my application. What are some best practices for that?",
+        "user": "61762db11790df42a8b5b54b",
+        "votes": []
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0621",
+        "title": "How to implement a stack using an array in Java?",
+        "content": "I need to implement a stack data structure using an array in Java. Can you provide a sample code?",
+        "user": "61762db11790df42a8b5b54c",
+        "votes": ["61762db11790df42a8b5b540"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0622",
+        "title": "What are the essential tools for a Python developer?",
+        "content": "I'm starting as a Python developer and want to know about essential tools like IDEs and linters.",
+        "user": "61762db11790df42a8b5b54d",
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0623",
+        "title": "How to handle CORS in Express.js?",
+        "content": "I'm building a web application using Express.js and facing CORS issues. How can I handle them?",
+        "user": "61762db11790df42a8b5b54e",
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0624",
+        "title": "What are the common design patterns in software development?",
+        "content": "I want to learn about design patterns like Singleton and Observer. How and when should I use them?",
+        "user": "61762db11790df42a8b5b540",
+        "votes": []
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0625",
+        "title": "How to debug JavaScript code effectively?",
+        "content": "I'm facing issues with my JavaScript code. What are some effective debugging techniques and tools?",
+        "user": "61762db11790df42a8b5b541",
+        "votes": ["61762db11790df42a8b5b540"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0626",
+        "title": "What are the best practices for API design?",
+        "content": "I'm designing an API and want to follow best practices. What should I consider for a well-designed API?",
+        "user": "61762db11790df42a8b5b542",
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0627",
+        "title": "How to handle concurrency in Java?",
+        "content": "I'm working on a Java project with concurrent tasks. How can I handle concurrency issues effectively?",
+        "user": "61762db11790df42a8b5b543",
+        "votes": []
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0628",
+        "title": "What are the benefits of using Docker in software development?",
+        "content": "I want to understand the benefits of using Docker for containerization in software development.",
+        "user": "61762db11790df42a8b5b544",
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541", "61762db11790df42a8b5b542", "61762db11790df42a8b5b543", "61762db11790df42a8b5b544"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0629",
+        "title": "How to handle form validation in React?",
+        "content": "I'm building a form in a React app and need to implement client-side validation. Any best practices?",
+        "user": "61762db11790df42a8b5b545",
+        "votes": []
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d062a",
+        "title": "What are the common data manipulation techniques in pandas?",
+        "content": "I'm using pandas for data analysis. What are some common techniques for data manipulation?",
+        "user": "61762db11790df42a8b5b546",
+        "votes": ["61762db11790df42a8b5b540"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d062b",
+        "title": "How to implement a binary tree in C++?",
+        "content": "I need to implement a binary tree data structure in C++. Can you provide a sample code?",
+        "user": "61762db11790df42a8b5b547",
+        "votes": []
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d062c",
+        "title": "What are the best resources for learning machine learning?",
+        "content": "I want to start learning machine learning. Can you suggest some good online courses and tutorials?",
+        "user": "61762db11790df42a8b5b548",
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b543", "61762db11790df42a8b5b544"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0636",
+        "title": "What are the advantages of using virtual environments in Python?",
+        "content": "I'm curious about virtual environments in Python. What are the benefits of using them in my projects?",
+        "user": "61762db11790df42a8b5b543",
+        "votes": ["61762db11790df42a8b5b541", "61762db11790df42a8b5b542", "61762db11790df42a8b5b543"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0637",
+        "title": "How to implement pagination in a web application?",
+        "content": "I have a web application with a large number of records. How can I implement pagination effectively?",
+        "user": "61762db11790df42a8b5b544",
+        "votes": []
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0638",
+        "title": "What are the best resources for learning React Native?",
+        "content": "I want to learn React Native for mobile app development. Can you suggest some good learning resources?",
+        "user": "61762db11790df42a8b5b545",
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d0639",
+        "title": "How to improve website performance in terms of loading speed?",
+        "content": "My website takes too long to load. What are some strategies to improve its loading speed?",
+        "user": "61762db11790df42a8b5b546",
+        "votes": []
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d063a",
+        "title": "What are the best practices for writing clean and maintainable code?",
+        "content": "I want to improve the quality of my code. What are some best practices for writing clean and maintainable code?",
+        "user": "61762db11790df42a8b5b547",
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541", "61762db11790df42a8b5b542"]
+    },
+    {
+        "_id": "624a92bc03bf45a9c81d063b",
+        "title": "How to handle user authentication in a Node.js app?",
+        "content": "I need to implement user authentication in my Node.js app. What libraries or techniques can I use?",
+        "user": "61762db11790df42a8b5b548",
+        "votes": ["61762db11790df42a8b5b540", "61762db11790df42a8b5b541"]
+    }
+]

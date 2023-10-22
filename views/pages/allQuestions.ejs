@@ -1,0 +1,79 @@
+<html lang="en">
+    <%- include("../partials/_head.ejs") -%>
+    <link rel="stylesheet" href="/../css/allQuestions.css" />
+    <body>
+        <%- include("../partials/_header.ejs") %>
+        <%-include("../partials/_signForm.ejs") %>
+        <div class="container main" id="main">
+            <%-include("../partials/_leftSideBar.ejs") %>
+            <div id="content" class="container contents">
+                <div class="box-1" id="box-1-q">
+                    <h1>All Questions</h1>
+                    <a href="/api/questions/ask" class="btn btn-primary ask">Ask Question</a>
+                </div>
+
+                <div class="box-2" id="box-2-q">
+                    <div id="sort-button-group" class="btn-group">
+                        <a href="" 
+                          class="btn btn-outline sort" 
+                          label="newest"
+                          >Newest</a>
+                          <a href=""
+                            class="btn btn-outline sort"
+                            label="most-liked"
+                            >Highest score</a
+                        >
+                        <a href=""
+                            class="btn btn-outline sort"
+                            label="most-answered"
+                            >Most answered</a
+                        >
+                    </div>
+                </div>
+
+                <div class="box-3" id="box-3-q">
+                    <% res.data.forEach(element => { %>
+                        <div class="container post">
+                            <div class="post-stats">
+                              <div class="stat-1">
+                                <span><%= element.voteCount %></span>
+                                <span>votes</span>
+                              </div>
+                              <div class="stat-2">
+                                <span><%= element.answerCount %></span>
+                                <span>answers</span>
+                              </div>
+                            </div>
+                            <div class="post-content">
+                              <h3 class="content-title">
+                                <a href="/api/questions/<%= element._id %>">
+                                <%= element.title %>
+                                </a>
+                              </h3>
+                              <div class="content-meta">
+                                <div class="tag">
+                                  <% element.tags.forEach(element => { %>
+                                    <a href="" class="btn qtag"><%= element %></a>
+                                  <% }) %>
+                                </div>
+                                <div class="user-card">
+                                  <a href="/api/users/<%= element.user._id %>" class="info">
+                                    <%= element.user.name %>
+                                  </a>
+                                  <span class="time">modified in <%= element._doc.dateDiff %> ago</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    <% }) %>
+                </div>
+
+                <%-include("../partials/_pagination.ejs") %>
+            </div>
+        </div>
+        <%-include("../partials/_footer.ejs") %>
+    </body>
+
+    <script src="/src/pages/allQuestions.js"></script>
+
+</html>

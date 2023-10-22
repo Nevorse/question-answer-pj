@@ -1,0 +1,38 @@
+<html>
+    <%- include("../partials/_head.ejs") -%>
+    <link rel="stylesheet" href="/../css/allTags.css" />
+    <body>
+        <%- include("../partials/_header.ejs") %>
+        <%-include("../partials/_signForm.ejs") %>
+        <div class="container main" id="main">
+            <%-include("../partials/_leftSideBar.ejs") %>
+            <div id="content" class="container contents">
+                <div id="box-1-t" class="box-1" >
+                    <h1>All Tags</h1>
+                </div>
+                <div id="box-2-t" class="box-2" >
+                    <div id="tag-search">
+                        <form action="/api/questions/tags">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Filter by tag name"
+                                name="search"
+                            />
+                        </form>
+                    </div>
+                </div>
+                <div id="box-3-t" class="box-3" >
+                    <% res.data.forEach(element => { %>
+                     <a class="btn qtag"><%= element %></a>
+                    <% }) %>
+                    <!-- <a class="btn">tag</a> -->
+                </div>
+                <%-include("../partials/_pagination.ejs") %>
+            </div>
+        </div>
+        <%-include("../partials/_footer.ejs") %>
+    </body>
+
+    <script src="/src/pages/allTags.js"></script>
+</html>

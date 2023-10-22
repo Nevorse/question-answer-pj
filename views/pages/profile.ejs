@@ -1,0 +1,98 @@
+<html lang="en">
+    <%- include("../partials/_head.ejs") -%>
+    <link rel="stylesheet" href="/../css/profile.css" />
+    <body>
+        <%- include("../partials/_header.ejs") %> <%-include("../partials/_signForm.ejs") %>
+        <div class="container main" id="main">
+            <%-include("../partials/_leftSideBar.ejs") %>
+            <div id="content" class="container contents">
+                <div id="profile" class="box-5">
+                    <div class="user-card">
+                        <img class="card-image" src="/uploads/<%= profile.profile_image %>" />
+                        <div class="card-body">
+                            <h2><%= profile.name %></h2>
+                            <p><%= profile.role %></p>
+                            <time>Members for <%= profile._doc.dateDiff %></time>
+                        </div>
+                    </div>
+
+                    <div id="profile-contents">
+                        <div id="profile-questions">
+                            <h3>Questions</h3>
+                            <div id="user-questions" class="profile-contents">
+                                <% res.questions.data.forEach(element => { %>
+                                <div class="content">
+                                    <div class="vote"><%= element.voteCount %></div>
+                                    <div class="title">
+                                        <a href="/api/questions/<%= element._id %>">
+                                            <% if (element.title.length > 40) { %> <%=
+                                            element.title.substring(0,40).replace(/\s+$/, '') + "..."; %> <% }
+                                            else { %> <%= element.title %> <% } %>
+                                        </a>
+                                    </div>
+                                    <time class="date"><%= element._doc.dateDiff %> ago</time>
+                                    <% if ((access_token && profile._id == user.id) || (access_token && user.role === "admin")) { %>
+                                    <div class="buttons">
+                                        <a href="/api/questions/<%= element._id %>/delete" class="btn delete confirm">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    </div>
+                                    <% } %>
+                                </div>
+                                <% }) %>
+                            </div>
+
+                            <a class="load-more">
+                                <i class="fa-solid fa-angles-down"></i>
+                            </a>
+                        </div>
+
+                        <div id="profile-answers">
+                            <h3>Answers</h3>
+                            <div id="user-answers" class="profile-contents">
+                                <% res.answers.data.forEach(element => { %>
+                                <div class="content">
+                                    <div class="vote"><%= element.voteCount %></div>
+                                    <div class="title">
+                                        <a href="/api/questions/<%= element.question %>#answer-<%= element.index %>">
+                                            <% if (element.content.length > 40) { %> <%=
+                                            element.content.substring(0,40).replace(/\s+$/, '') + "..."; %> <%
+                                            } else { %> <%= element.content %> <% } %>
+                                        </a>
+                                    </div>
+                                    <time class="date"><%= element._doc.dateDiff %> ago</time>
+                                    <% if ((access_token && profile._id == user.id) || (access_token && user.role === "admin")) { %>
+                                    <div class="buttons">
+                                        <a href="/api/questions/answers/<%= element._id %>/delete" class="btn delete confirm">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    </div>
+                                    <% } %>
+                                </div>
+                                <% }) %>
+                            </div>
+                            <a class="load-more">
+                                <i class="fa-solid fa-angles-down"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%-include("../partials/_footer.ejs") %>
+    </body>
+    <script>
+        const loadMoreData = {
+            questions: {
+                count: <%- res.questions.count %>,
+                leng: <%- res.questions.data.length %>
+            },
+            answers: {
+                count: <%- res.answers.count %>,
+                leng: <%- res.answers.data.length %>
+            }
+        }
+    </script>
+    <script src="/src/pages/profile.js"></script>
+</html>

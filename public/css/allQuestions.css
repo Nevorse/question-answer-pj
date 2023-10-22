@@ -1,0 +1,201 @@
+/*   Content   */
+#content-q {
+    min-height: 704.4px;
+    margin: 0 142.5px;
+    padding: 0;
+    padding-top: 26px;
+    flex-direction: column;
+}
+/*   Box-1   */
+#box-1-q {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 26px;
+}
+#box-1-q h1 {
+    font-size: 30px;
+    margin: 0;
+}
+#box-1-q .ask {
+    background-color: hsl(206, 60%, 40%);
+    border: 0;
+    font-size: 13px;
+    padding: 6px 12px;
+    padding-top: 8px;
+}
+#box-1-q .ask:hover {
+    background-color: hsl(206, 60%, 50%);
+}
+/*   Box-2   */
+#box-2-q {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 16px;
+    margin-left: 26px;
+}
+#box-2-q .btn-group .btn {
+    border-color: hsl(0,0%,40%);
+    color: hsl(0, 0%, 60%);
+    font-size: 13px;
+}
+#box-2-q .btn-group .active {
+    background-color: hsl(0, 0%, 24%);
+    border-color: hsl(0,0%,60%);
+    color: hsl(0, 0%, 75%);
+}
+/*   Box-3   */
+#box-3-q {
+    display: flex;
+    flex-direction: column;
+}
+#box-3-q .post {
+    border-top: 1px solid hsl(0,0%,60%);
+    display: flex;
+    padding: 16px;
+    font-size: 13px;
+}
+#box-3-q .post .post-stats {
+    background-color: hsl(0,0%,17.5%);
+    padding-right: 20px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    flex-grow: 0;
+}
+
+#box-3-q .post .post-content {
+    background-color: hsl(0,0%,17.5%);
+    flex-grow: 5;
+}
+#box-3-q .content-title a {
+    text-decoration: none;
+    color: rgb(40, 120, 200);
+    font-size: 20px;
+}
+#box-3-q .post-content .content-meta {
+    display: flex;
+    justify-content: space-between;   
+}
+#box-3-q .content-meta .tag .btn {
+    border: 0;
+    padding: 2px 6px;
+    margin: 0 2px;
+    margin-top: 4px;
+    text-align:center;
+    font-size: 10px;
+    background-color: rgb(40, 120, 200);
+    color: hsl(0, 0%, 95%);
+}
+#box-3-q .content-meta .user-card a {
+    text-decoration: none;
+    color: rgb(40, 120, 200);;
+}
+/*  Box-4  */
+#box-4-q {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 16px;
+    border-top: 1px solid hsl(0,0%,60%);
+    box-sizing: content-box;
+    height: 29px;
+}
+#box-4-q .pagination a{
+    font-size: 11px;
+    color: hsl(0, 0%, 75%);
+    border-color: hsl(0, 0%, 75%);
+}
+#box-4-q .pagination a:hover:not(.active) {
+    background-color: hsl(210,4.5%,30.5%);
+    border-color: hsl(210,5.5%,43.5%);
+    color: hsl(210,4%,95%);
+}
+
+#box-4-q .pagination .active {
+    border-color: hsla(0, 0%, 0%, 0);
+    background-color: rgb(244, 130, 37);
+    color: hsl(0, 0%, 10%);
+}
+#box-4-q .pager-float .next {
+    margin-left: 5px;
+}
+#box-4-q .pager-float .prev {
+    margin-right: 5px;
+}
+#box-4-q .pager-float .separator {
+    color: hsl(0, 0%, 80%);
+    padding: 0 12px;
+}
+#box-4-q .sizer-float span{
+    padding-top: 3.5px;
+    padding-left: 12px;
+    font-size: 13px;
+}
+/*  Box-5  */
+#ask-question label {
+    font-size: 1.2rem;
+    display: block;
+}
+.ask-question-input {
+    background-color: hsl(0, 0%, 14%);
+    border: 1px solid hsl(210,4%,26%);
+    border-radius: 5px;
+    padding: 12px;
+    margin: 12px 4px;
+}
+#ask-question-title{
+    color: hsl(0, 0%, 85%);
+    background-color: hsl(0, 0%, 14%);
+    border: 1px solid rgb(105, 111, 117);
+}
+#ask-question-content {
+    color: hsl(0, 0%, 85%);
+    background-color: hsl(0, 0%, 14%);
+    border: 1px solid rgb(105, 111, 117);
+    border-radius: 5px;
+    height: 150px;
+}
+#ask-question-tags {
+    padding-left: 0.5rem;
+    outline: none;
+    border: none;
+    width: 150px;
+    background: transparent;
+    color: hsl(0, 0%, 85%);;
+}
+#tag-input-box {
+    color: hsl(0, 0%, 85%);
+    background-color: hsl(0, 0%, 14%);
+    border: 1px solid rgb(105, 111, 117);
+    margin-bottom: 10px;
+    cursor: text;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#question-tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#question-tags .qtag {
+    font-size: 12.5px;
+    padding: 3px 9px;
+    margin: 3px;
+}
+#ask-question .ask {
+    background-color: hsl(206, 60%, 40%);
+    border: 1px solid hsl(206, 60%, 40%);
+    padding: 9px 18;
+    font-size: 15px;
+    margin: 6px 4px;
+}
+#ask-question .ask:hover {
+    background-color: hsl(206, 60%, 50%);
+}

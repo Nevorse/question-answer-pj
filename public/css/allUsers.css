@@ -1,0 +1,69 @@
+#box-1-u {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 26px;
+}
+#box-1-u h1 {
+    font-size: 30px;
+    margin: 0;
+}
+#box-2-u #user-search {
+    margin-left: 26px;
+    margin-bottom: 26px;
+}
+#box-2-u input {
+    width: 200px;
+    background-color: hsl(0, 0%, 16%);
+    border-color: hsl(210, 5%, 44%);
+    color: hsl(0, 0%, 90%);
+}
+#box-2-u input::placeholder {
+    color: hsl(0, 0%, 50%);
+}
+
+#box-3-u {
+    display: grid;
+    grid-template-columns:repeat(4, minmax(200px, 1fr));
+    column-gap: 20px;
+    row-gap: 40px;
+    margin: 20px;
+    margin-right: 0;
+}
+#box-3-u .user-card {
+    padding: 4px;
+    background-color: hsl(0, 0%, 16.2%);
+    display: flex;
+    align-items: center;
+    border: 1px solid hsl(210, 5%, 44%);
+    border-radius: 5px;
+}
+#box-3-u .card-image {
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 4px;
+    width: 40px;
+    height: 40px;
+}
+#box-3-u .card-body {
+    font-size: 0.8rem;
+    margin: 0 10px;
+    margin-left: 5px;
+}
+#box-3-u .card-body a {
+    text-decoration: none;
+    color: inherit;
+}
+#box-3-u .card-body h5 {
+    cursor: pointer;
+    font-size: 1rem;
+}
+@media (max-width:1150px) {
+    #box-3-u {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+}
+@media (max-width: 920px) {
+    #box-3-u {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}

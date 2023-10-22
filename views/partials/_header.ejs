@@ -1,0 +1,51 @@
+<header>
+    <div class="container navi">
+        <a href="/api/questions" id="logo">
+            <img src="/../css/img/logo-meta.png" alt="" />
+        </a>
+        <form id="searchInput" role="search">
+            <input class="form-control" placeholder="Search"/>
+            <button id="searchBtn" class="btn" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <% if (access_token) { %>
+            <button id="signin" class="btn btn-outline-success sign" style="display: none;">
+                Sign in
+            </button>
+            <button id="signup" class="btn btn-outline-success sign" style="display: none;">
+                Sign up
+            </button>
+            <!--  -->
+            <a href="/api/users/<%= user.id %>" id="profile-card" class="user-card">
+                    <img src="/uploads/<%= user.profile_image %>" class="card-image" />
+                <div class="card-body">
+                        <h6><%= user.name %></h6>
+                </div>
+            </a>
+            <a id="logout" class="btn btn-outline-danger sign" href="/api/auth/logout">
+                Log out
+            </a>
+        <% } else { %>
+            <button id="signin" class="btn btn-outline-success sign">
+                Sign in
+            </button>
+            <button id="signup" class="btn btn-outline-success sign">
+                Sign up
+            </button>
+            <!--  -->
+            <div id="profile-card" class="user-card" style="display: none;">
+                <img src="" class="card-image" />
+                <div class="card-body">
+                    <h6></h6>
+                </div>
+            </div>
+            <a id="logout" class="btn btn-outline-danger sign" style="display: none;">
+                Log out
+            </a>
+        <% } %>
+        
+    </div>
+</header>
+
+<script src="/src/partials/header.js"></script>

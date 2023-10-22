@@ -1,0 +1,44 @@
+<div id="popup-form" class="popup-form">
+    <div id="sign-form" class="form-box">
+        <i id="form-close" class="fa-solid fa-xmark"></i>
+        <h1 id="form-title">Sign Up</h1>
+        <form id="sign-form-form" method="post">
+            <div class="input-group">
+
+                <div id="name-field" class="form-input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input id="name-input" type="text" placeholder="Name" name="name"/>
+                </div>
+
+                <div id="email-field" class="form-input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" name="email"/>
+                </div>
+
+                <div id="password-field" class="form-input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password"/>
+                </div>
+                
+                <p id="lost-password">
+                    Lost password <a href="#">Click here</a>
+                </p>
+            </div>
+
+            <div id="form-alert" class="form-alert">
+
+            </div>
+
+            <div class="form-btn-field">
+                <button type="button" id="form-signinBtn">Sign in</button>
+
+                <button type="button" id="form-lostpassBtn" class="lost-pass-btn">Send email</button>
+                <button type="button" id="form-lostCancelBtn" class="lost-pass-btn disable">Cancel</button>
+
+                <button type="button" id="form-signupBtn">Sign up</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/src/partials/signForm.js"></script>

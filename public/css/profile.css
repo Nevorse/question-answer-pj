@@ -1,0 +1,113 @@
+
+/* Box-5 */
+#profile {
+    padding: 24px;
+    padding-top: 0;
+}
+#profile h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+#profile .user-card {
+    display: flex;
+    border-radius: 5px;
+}
+#profile .card-image {
+    border-radius: 5px;
+    width: 128px;
+    height: 128px;
+}
+#profile .card-body {
+    margin-left: 20px;
+}
+#profile-about {
+    margin-top: 24px;
+}
+#profile-contents {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 24px;
+    margin-top: 48px;
+}
+@media (max-width: 1200px) {
+    #profile-contents {
+        display: grid;
+        grid-template-columns: auto;
+
+    }
+}
+/********************/
+#profile .profile-contents {
+    position: relative;
+    z-index: 1;
+    background-color: hsl(0, 0%, 17.5%);
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(105, 111, 117);
+    border-radius: 6px;
+}
+.profile-contents .content {
+    display: flex;
+    padding: 12px;
+    border-bottom: 1px solid rgb(105, 111, 117);
+}
+.profile-contents .content:last-child {
+    border: 0;
+}
+.profile-contents .vote {
+    font-size: 0.9rem;
+    border: 1px solid hsl(210,4%,30%);
+    border-radius: 4px;
+    padding: 0 6px;
+    margin: 0 6px;
+}
+.profile-contents .title {
+    margin: 0 0.375rem;
+    padding-right: 0.75rem;
+}
+.profile-contents .title a {
+    text-decoration: none;
+    color: rgb(40, 120, 200);
+    cursor: pointer;
+}
+.profile-contents .date {
+    margin-left: auto;
+    font-size: 0.9rem;
+}
+.profile-contents .buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-left: 10px;
+}
+.profile-contents .buttons .btn {
+    font-size: 0.9rem;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+}
+.profile-contents .delete {
+    background-color: hsl(0, 72%, 50%);
+}
+#profile-contents .load-more {
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    top: -10px;
+    justify-content: center;
+    background-color: hsl(0, 0%, 14%);
+    border: 1px solid hsl(210,4%,26%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#profile-contents .disabled {
+    display: none;
+}
+#profile-contents .disabled .load-more {
+    display: none;
+}
+/********************/

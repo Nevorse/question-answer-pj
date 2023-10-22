@@ -1,0 +1,51 @@
+<html>
+    <%- include("../partials/_head.ejs") -%>
+    <link rel="stylesheet" href="/../css/allUsers.css" />
+    <body>
+        <%- include("../partials/_header.ejs") %>
+        <%-include("../partials/_signForm.ejs") %>
+        <div class="container main" id="main">
+            <%-include("../partials/_leftSideBar.ejs") %>
+            <div id="content" class="container contents">
+                <div id="box-1-u" class="box-1" >
+                    <h1>All Users</h1>
+                </div>
+                <div id="box-2-u" class="box-2" >
+                    <div id="user-search">
+                        <form action="/api/users">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Filter by user"
+                                name="search"
+                            />
+                        </form>
+                    </div>
+                </div>
+
+
+                <div id="box-3-u" class="box-3" >
+                    <% res.data.forEach(element => { %>
+                        <div class="user-card grid-item quser">
+                            <a href="/api/users/<%= element._id %>">
+                                <img src="/uploads/<%= element.profile_image %>" class="card-image">
+                            </a>
+                            <div class="card-body">
+                                <a href="/api/users/<%= element._id %>">
+                                    <h5><%= element.name %></h5>
+                                </a>
+                                <p><%= element.role %></p>
+                                <time>Members for <%= element._doc.dateDiff %></time>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+
+
+                <%-include("../partials/_pagination.ejs") %>
+            </div>
+        </div>
+        <%-include("../partials/_footer.ejs") %>
+    </body>
+    <script src="/src/pages/allUsers.js"></script>
+</html>

@@ -1,0 +1,40 @@
+<div class="box-4 container" id="box-4">
+    <div class="pagination pager-float">
+        <a
+            <% if (!res.pagination.previous) { %>
+            style="display: none;"
+            <% } %>
+            id="prev-button"
+            class="btn btn-outline prev"
+            aria-label="Previous page"
+            title="Previous page"
+            >prev</a>
+        <div class="btn-group" id="page-list">
+            <!-- <a class="btn btn-outline page active" page-index="1" aria-label="Page 1">1</a> -->
+        </div>
+        <a
+            <% if (!res.pagination.next) { %>
+            style="display: none;"
+            <% } %>
+            id="next-button"
+            class="btn btn-outline next"
+            aria-label="Next page"
+            title="Next page"
+            >next</a>
+    </div>
+    <div class="pagination sizer-float">
+        <div class="btn-group" id="page-size">
+            <a class="btn btn-outline sizer" page-size="5">5</a>
+            <a class="btn btn-outline sizer" page-size="10">10</a>
+            <a class="btn btn-outline sizer" page-size="15">15</a>
+        </div>
+        <span>per page</span>
+    </div>
+</div>
+
+<script>
+    <% if (JSON.stringify(res)) { %>
+        const res = <%- JSON.stringify(res) %>;
+    <% } %>
+</script>
+<script type="module" src="/src/partials/pagination.js"></script>

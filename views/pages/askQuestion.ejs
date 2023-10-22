@@ -1,0 +1,54 @@
+<html lang="en">
+    <%- include("../partials/_head.ejs") -%>
+    <link rel="stylesheet" href="/../css/allQuestions.css" />
+    <body>
+        <%- include("../partials/_header.ejs") %>
+        <%-include("../partials/_signForm.ejs") %>
+        <div class="container main" id="main">
+            <%-include("../partials/_leftSideBar.ejs") %>
+            <div id="content" class="container contents">
+                <div
+                    id="ask-question"
+                    class="box-5 container"
+                >
+                    <form action="/api/questions/ask" method="post">
+                        <div id="question-title" class="ask-question-input">
+                            <label for="ask-question-title" class="form-label"
+                                >Title</label
+                            >
+                            <input id="ask-question-title" class="form-control" name="title" onkeydown="return event.key != 'Enter';"/>
+                        </div>
+
+                        <div id="question-content" class="ask-question-input">
+                            <label for="ask-question-content" class="form-label"
+                                >Content</label
+                            >
+                            <textarea
+                                id="ask-question-content"
+                                class="form-control"
+                                name="content"
+                            ></textarea>
+                        </div>
+
+                        <div id="question-tags" class="ask-question-input">
+                            <label for="ask-question-tags" class="form-label"
+                                >Tags</label
+                            >
+                            <div id="tag-input-box" class="form-control">
+                                <ul>
+                                    <input id="ask-question-tags" onkeydown="return event.key != 'Enter';"/>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary ask" type="submit">
+                            Ask Question
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%-include("../partials/_footer.ejs") %>
+    </body>
+    <script src="/src/pages/askQuestion.js"></script>
+</html>

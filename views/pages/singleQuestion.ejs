@@ -1,0 +1,117 @@
+<html lang="en">
+    <%- include("../partials/_head.ejs") -%>
+    <link rel="stylesheet" href="/../css/singleQuestion.css" />
+    <body>
+        <%- include("../partials/_header.ejs") %> <%-include("../partials/_signForm.ejs") %>
+        <div class="container main" id="main">
+            <%-include("../partials/_leftSideBar.ejs") %>
+            <div id="content" class="container contents">
+                <div class="box-1" id="box-1-sq">
+                    <div class="question-title">
+                        <h2><%= question_data.title %></h2>
+                        <div>
+                            <span>Asked</span>
+                            <time><%= question_data._doc.dateDiff %> ago</time>
+                        </div>
+                    </div>
+
+                    <a href="/api/users/<%= question_data.user._id %>" class="user-card">
+                        <img src="/uploads/<%= question_data.user.profile_image %>" class="card-image" />
+                        <div class="card-body">
+                            <h5><%= question_data.user.name %></h5>
+                            <p><%= question_data.user.role %></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="box-2" id="box-2-sq">
+                    <div class="votecell">
+                        <a href="/api/questions/<%= question_data._id %>/vote">
+                            <i id="upvote" class="fa-solid fa-chevron-up" style="font-size: 32px"></i>
+                        </a>
+                        <div class="vote"><%= question_data.voteCount %></div>
+                        <a href="/api/questions/<%= question_data._id %>/undo_vote">
+                            <i id="downvote" class="fa-solid fa-chevron-down" style="font-size: 32px"></i>
+                        </a>
+                    </div>
+
+                    <div class="postcell">
+                        <div class="post-content">
+                            <p><%= question_data.content %></p>
+                        </div>
+                        <div class="post-tags">
+                            <% question_data.tags.forEach(element => { %>
+                            <a href="" class="btn qtag"><%= element %></a>
+                            <% }) %>
+                        </div>
+                        <div class="answer-count">
+                            <span><%= question_data.answerCount %> Answers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-3" id="box-3-sq">
+                    <% res.data.forEach(element => { %>
+                    <div id="answer-<%= element.index %>" class="answer">
+                        <div class="votecell">
+                            <a href="/api/questions/<%= question_data._id %>/answers/<%= element._id %>/vote">
+                                <i id="upvote" class="fa-solid fa-chevron-up" style="font-size: 32px"></i>
+                            </a>
+                            <div class="vote"><%= element.voteCount %></div>
+                            <a
+                                href="/api/questions/<%= question_data._id %>/answers/<%= element._id %>/undo_vote">
+                                <i id="downvote" class="fa-solid fa-chevron-down" style="font-size: 32px"></i>
+                            </a>
+                        </div>
+
+                        <div class="answer-content">
+                            <p><%= element.content %></p>
+
+                            <div class="post-signature">
+                                <div>
+                                    <span>Answered</span>
+                                    <time><%= element._doc.dateDiff %> ago</time>
+                                </div>
+
+                                <div class="user-card">
+                                    <a href="/api/users/<%= element.user._id %>">
+                                        <img src="/uploads/<%= element.user.profile_image %>" class="card-image" />
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="/api/users/<%= element.user._id %>">
+                                            <h6><%= element.user.name %></h6>
+                                        </a>
+                                        <p><%= element.user.role %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+
+                <%-include("../partials/_pagination.ejs") %>
+
+                <div id="add-answer" class="box-5" <% if (!access_token) { %>
+                    style="display: none;"<% } %>>
+                    <form action="/api/questions/<%= question_data._id %>/answers" method="post">
+                        <div class="form-floating">
+                            <textarea
+                                id="answer-textarea"
+                                class="form-control"
+                                name="content"
+                                placeholder="Leave a comment here"></textarea>
+                            <button class="btn" type="submit">Post Your Answer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%-include("../partials/_footer.ejs") %>
+    </body>
+
+    <script>
+        const answerCount = <%- res.count %>
+    </script>
+    <script src="/src/pages/singleQuestion.js"></script>
+</html>
