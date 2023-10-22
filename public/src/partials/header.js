@@ -83,8 +83,8 @@ function tagsHref() {
     const searchString = searchArr.toString().replace(",","&").replace("?","");
     
     // Set href's
-    const url = window.location.origin + window.location.pathname + "?" + searchString;
-    
+    const url = window.location.origin + "/api/questions?" + searchString;
+
     const tags = document.querySelectorAll(".qtag");
     for (let i = 0; i < tags.length; i++) {
         const tagName = tags[i].textContent;
