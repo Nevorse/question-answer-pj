@@ -9,7 +9,7 @@ const admin = require("./admin");
 router.get("/",(req,res) => {
     res.json({
         success: true,
-        message: "Question Answer API"
+        message: "Welcome Question Answer Project"
     });
 });
 

@@ -43,6 +43,9 @@ app.use(flash());
 
 // Routers Middleware
 app.use("/api",routers);
+app.get("/",(req, res, next) => {
+    res.redirect("/api/questions");
+});
 
 // Error Handler
 app.use(customErrorHandler);
